@@ -48,7 +48,7 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
         }
 }
 ```
-## **ATENÇÃO**: A baixo segue um exemplo de resposta do cliente sem o animal cadastrado e  outro após o animal do cliente ser cadastrado.
+## **ATENÇÃO**: A baixo segue um exemplo de resposta do cliente sem o animal cadastrado e  outro do registro do animal referente ao id do cliente.
 
 #### **Exemplos de resposta**
 
@@ -63,9 +63,10 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
 }
 
 ```
+```
 // HTTP Status 200
-#### **Exemplos de resposta do animal cadastrado referente ao id do clinte**
- {
+#### **Exemplos de resposta do registro do animal*
+   {
     "idanimal": 8,
     "nome": "Argo",
     "idade": 9,
@@ -76,7 +77,9 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
         "telefone": null
     }
 }
+
 ```
+
 ### **Retortar todos os cliente**
 #### `GET` `/cliente`
 
