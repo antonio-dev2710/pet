@@ -18,7 +18,7 @@ Essa é a rota que será utilizada para cadastrar um novo cliente no sistema.
 
 // POST /cliente
 {
-    "name": "Daniel Dias Fernandes",
+    "nome": "Daniel Dias Fernandes",
     "telefone": "(11)3576-1485"
 }
 ```
@@ -48,18 +48,33 @@ Essa é a rota que permite  cadastrar o animal do cliente realizar no sistema.
         }
 }
 ```
+## **ATENÇÃO**: A baixo segue um exemplo de resposta do cliente sem o animal cadastrado e  outro após o animal do cliente ser cadastrado.
 
 #### **Exemplos de resposta**
 
 ```
 // HTTP Status 200
-{
-    "user": {
-        "id": "2532e9e7-dcfc-4a03-8b42-75c35b4d1c44",
-        "name": "José",
-        "email": "jose@email.com",
-		"address": "ST. D Norte QND 47, Brasília, DF, 70297-400"
-    },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjIzMjQ5NjIxLCJleHAiOjE2MjMyNzg0MjF9.KLR9t7m_JQJfpuRv9_8H2-XJ92TSjKhGPxJXVfX6wBI"
+
+#### **Exemplos de resposta de registro do cadrastro do cliente**
+   {
+    "idcliente": 12,
+    "nome": "Daniel Dias Fernandes",
+    "telefone": "(11)3576-1485",
+    "listAnimais": null
+}
+// HTTP Status 200
+```
+// HTTP Status 200
+#### **Exemplos de resposta do animal cadastrado referente ao id do clinte**
+ {
+    "idanimal": 8,
+    "nome": "Argo",
+    "idade": 9,
+    "peso": 30.0,
+    "cliente": {
+        "idcliente": 12,
+        "nome": null,
+        "telefone": null
+    }
 }
 ```
