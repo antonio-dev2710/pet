@@ -12,8 +12,9 @@ Essa é a rota que será utilizada para cadastrar um novo cliente no sistema.
 
     -   name
     -  telefone
-
 #### **Exemplo de requisição**
+
+```
 
 
 // POST /cliente
@@ -21,6 +22,7 @@ Essa é a rota que será utilizada para cadastrar um novo cliente no sistema.
     "nome": "Daniel Dias Fernandes",
     "telefone": "(11)3576-1485"
 }
+```
 ```
 #### `POST` `/animal`
 
@@ -33,10 +35,10 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
     -   peso
     -   idcliente
    
-
+```
 #### **Exemplo de requisição**
 
-
+```
 // POST /animal
 {
 
@@ -48,6 +50,7 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
         }
 }
 ```
+
 ## **ATENÇÃO**: A baixo segue um exemplo de resposta do cliente sem o animal cadastrado e  outro do registro do animal referente ao id do cliente.
 
 #### **Exemplos de resposta**
@@ -128,7 +131,7 @@ Rota utilizada para demonstrar todos os clientes cadastrados no sistema.
         "telefone": "(67) 2787-8138",
         "listAnimais": []
     }
-    ......
+   
 
 ```
 ### **Retortar um cliente**
@@ -154,4 +157,4 @@ Essa é a rota que será utilizada para fazer a busca de um cliente no sistema a
         }
     ]
 }
-
+```
