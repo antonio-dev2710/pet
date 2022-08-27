@@ -4,7 +4,7 @@
 
 ### **Cadastrar **
 
-#### `POST` `/cleinte`
+#### `POST` `/cliennte`
 
 Essa é a rota que será utilizada para cadastrar um novo cliente no sistema.
 
@@ -24,7 +24,7 @@ Essa é a rota que será utilizada para cadastrar um novo cliente no sistema.
 ```
 #### `POST` `/animal`
 
-Essa é a rota que permite  cadastrar o animal do cliente realizar no sistema.
+Essa é a rota que permite cadastrar o animal do cliente no sistema.
 
 -   **Requisição**  
 
@@ -44,7 +44,7 @@ Essa é a rota que permite  cadastrar o animal do cliente realizar no sistema.
         "idade": 12,
         "peso": 30.0,
         "cliente": {
-            "idcliente": 10
+            "idcliente": 12
         }
 }
 ```
@@ -78,3 +78,78 @@ Essa é a rota que permite  cadastrar o animal do cliente realizar no sistema.
     }
 }
 ```
+### **Retortar todos os cliente**
+#### `GET` `/cliente`
+
+Rota utilizada para demonstrar todos os clientes cadastrados no sistema.
+
+-   **Requisição**   
+    O corpo (body) deverá possuir um objeto com as seguintes propriedades (respeitando estes nomes):
+
+    -   nome
+    -   telefone
+    - listAnimais
+
+#### **Exemplo de requisição**
+
+```
+// GET /cliente
+
+```
+
+#### **Exemplos de resposta**
+
+```
+[
+    {
+        "idcliente": 1,
+        "nome": "Antonio Alves",
+        "telefone": "(92)3151-3578",
+        "listAnimais": []
+    },
+    {
+        "idcliente": 2,
+        "nome": "Victor Pereira Oliveira",
+        "telefone": "(41) 2357-3265",
+        "listAnimais": [
+            {
+                "idanimal": 3,
+                "nome": "Chrono",
+                "idade": 10,
+                "peso": 20.0
+            }
+        ]
+    },
+    {
+        "idcliente": 7,
+        "nome": "Victor Pereira Oliveira",
+        "telefone": "(67) 2787-8138",
+        "listAnimais": []
+    }
+    ......
+
+```
+### **Retortar um cliente**
+#### `GET` `/cliente/[idcliente];`
+
+Essa é a rota que será utilizada para fazer a busca de um cliente no sistema através do número do seu id.
+
+// GET /cliente/12
+
+```
+
+#### **Exemplos de resposta**
+{
+    "idcliente": 12,
+    "nome": "Daniel Dias Fernandes",
+    "telefone": "(11)3576-1485",
+    "listAnimais": [
+        {
+            "idanimal": 8,
+            "nome": "Argo",
+            "idade": 9,
+            "peso": 30.0
+        }
+    ]
+}
+
