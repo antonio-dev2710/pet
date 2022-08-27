@@ -39,12 +39,13 @@ public class ClienteService implements ICliente {
     @Override
     public Cliente buscarPeloId(Integer idcliente) {
         // TODO Auto-generated method stub
-        return null;
+        return repository.findById(idcliente).orElse(null);
+       
     }
 
     @Override
     public void excluirCliente(Integer idcliente) {
-        // TODO Auto-generated method stub
+        repository.deleteById(idcliente);
 
     }
 
