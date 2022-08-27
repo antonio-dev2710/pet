@@ -54,7 +54,6 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
 
 ```
 // HTTP Status 200
-
 #### **Exemplos de resposta de registro do cadrastro do cliente**
    {
     "idcliente": 12,
@@ -62,7 +61,7 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
     "telefone": "(11)3576-1485",
     "listAnimais": null
 }
-// HTTP Status 200
+
 ```
 // HTTP Status 200
 #### **Exemplos de resposta do animal cadastrado referente ao id do clinte**
