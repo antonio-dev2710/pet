@@ -1,4 +1,4 @@
-# API - Tudo de Bom
+# API - Pet Shop
 
 Esta é uma REST API que permite o cadastro de novos clientes e de animais, incluindo dados pessoais, dados para contato, nome do animal, peso, idade e controle de serviço adiquiro pelos clientes.
 
