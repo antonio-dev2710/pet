@@ -158,3 +158,70 @@ Essa é a rota que será utilizada para fazer a busca de um cliente no sistema a
     ]
 }
 ```
+### **Atualizar um cliente**
+#### `PUT` `/cliente`
+
+Essa é a rota que será utilizada para editar um cliente no sistema através do id.
+
+-   **Requisição**  
+    Sem parâmetros de rota ou de query.  
+    O corpo (body) deverá possuir um objeto com as seguintes propriedades (respeitando estes nomes):
+
+    -   idcliente
+    -   nome
+    -   telefone
+
+#### **Exemplo de requisição**
+
+```
+// PUT /cliente
+{
+  
+        "idcliente": 1,
+        "nome": "Antonio Alves",
+        "telefone": "(92)3151-3578",
+        "listAnimais": []
+    
+      
+}
+```
+
+#### **Exemplos de resposta**
+
+```
+{
+     
+    "idcliente": 1,
+    "nome": "Antonio Alves",
+    "telefone": "(85) 3012-1129",
+    "listAnimais": null
+
+}
+```
+### **Deletar um cliente**
+
+#### `DELETE` `/cliente/[idcliente]`
+
+Rota utilizada para deletar um cliente no sistema.
+
+-   **Requisição**  
+    O parâmetro de rota será o id do Cliente.  
+    
+
+#### **Exemplo de requisição**
+
+```
+// DELETE /cliente/7
+
+```
+
+#### **Exemplos de resposta**
+
+```
+// HTTP Status 200 
+{
+   7
+}
+Retorna o id do clinete que deletado do Sistema
+```
+
