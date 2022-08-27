@@ -2,7 +2,7 @@
 
 ## **Endpoints**
 
-### **Cadastrar **
+### **Cadastrar  um clinete e um animal**
 
 #### `POST` `/cliennte`
 
@@ -51,7 +51,7 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
 }
 ```
 
-## **ATENÇÃO**: A baixo segue um exemplo de resposta do cliente sem o animal cadastrado e  outro do registro do animal referente ao id do cliente.
+## **ATENÇÃO**: A baixo segue um exemplo de resposta do cliente sem o animal cadastrado e  outro exemplo  do animal cadastrado no id sistema.
 
 #### **Exemplos de resposta**
 
@@ -223,5 +223,64 @@ Rota utilizada para deletar um cliente no sistema.
    7
 }
 Retorna o id do clinete que deletado do Sistema
+```
+### **Pesquisar todas as ordem de serviços relaziada pelo cliente**
+#### `GET` `/servico`
+
+Essa é a rota que será utilizada para retornar todos os serviços relalizado no Pet Shop que ficaram alocados  no sistema.
+
+-   **Requisição**  
+    Sem parâmetros de query.  
+
+#### **Exemplo de requisição**
+
+```
+// GET /servico
+
+```
+
+#### **Exemplos de resposta**
+
+```
+[
+    {
+        "idordem_servico": 1,
+        "valor": 150.0,
+        "entrada": "10:00",
+        "saida": "11:00",
+        "cliente": {
+            "idcliente": 9,
+            "nome": "Cauã Sousa Santos",
+            "telefone": "(96) 3505-8354",
+            "listAnimais": [
+                {
+                    "idanimal": 2,
+                    "nome": "Flea",
+                    "idade": 2,
+                    "peso": 5.35
+                }
+            ]
+        }
+    },
+    {
+        "idordem_servico": 2,
+        "valor": 200.0,
+        "entrada": "16:00",
+        "saida": "17:45",
+        "cliente": {
+            "idcliente": 8,
+            "nome": "Rodrigo Cardoso Martins",
+            "telefone": "(61) 2273-2700",
+            "listAnimais": [
+                {
+                    "idanimal": 1,
+                    "nome": "Marlin",
+                    "idade": 5,
+                    "peso": 10.0
+                }
+            ]
+        }
+    }
+  
 ```
 
