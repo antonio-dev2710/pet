@@ -1,57 +1,57 @@
-# api_descarteBem
+# Api Pet Shop
 
 ## **Endpoints**
 
-### **Cadastrar usuário**
+### **Cadastrar **
 
-#### `POST` `/user`
+#### `POST` `/cleinte`
 
-Essa é a rota que será utilizada para cadastrar um novo usuario no sistema.
+Essa é a rota que será utilizada para cadastrar um novo cliente no sistema.
 
 -   **Requisição**  
 
     -   name
-    -   email
-    -   cpf
-    -   password
-    -   address
+    -  telefone
 
 #### **Exemplo de requisição**
 
-```javascript
-// POST /usuario
+
+// POST /cliente
 {
-    "name": "José",
-    "email": "jose@email.com",
-    "cpf": "12345678910",
-    "password": "12345senha",
-    "address": "ST. D Norte QND 47, Brasília, DF, 70297-400"
+    "name": "Daniel Dias Fernandes",
+    "telefone": "(11)3576-1485"
 }
 ```
-### **Serviço de um Pet Shop**
+#### `POST` `/animal`
 
-#### `POST` `/login`
-
-Essa é a rota que permite o usuario cadastrado realizar o login no sistema.
+Essa é a rota que permite  cadastrar o animal do cliente realizar no sistema.
 
 -   **Requisição**  
 
-    -   email
-    -   password
+    -   nome
+    -   idade
+    -   peso
+    -   idcliente
+   
 
 #### **Exemplo de requisição**
 
-```javascript
-// POST /login
+
+// POST /animal
 {
-    "email": "jose@email.com",
-    "password": "12345senha"
+
+        "nome": "Argo",
+        "idade": 12,
+        "peso": 30.0,
+        "cliente": {
+            "idcliente": 10
+        }
 }
 ```
 
 #### **Exemplos de resposta**
 
-```javascript
+```
 // HTTP Status 200
 {
     "user": {
