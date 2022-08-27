@@ -1,4 +1,8 @@
-# Api Pet Shop
+# API - Tudo de Bom
+
+Esta é uma REST API que permite o cadastro de novos clientes e de animais, incluindo dados pessoais, dados para contato, nome do animal, peso, idade e controle de serviço adiquiro pelos clientes.
+
+
 
 ## **Endpoints**
 
@@ -224,7 +228,7 @@ Rota utilizada para deletar um cliente no sistema.
 }
 Retorna o id do clinete que deletado do Sistema
 ```
-### **Pesquisar todas as ordem de serviços relaziada pelo cliente**
+### **Pesquisar todas as ordens de serviço relaziada pelo cliente**
 #### `GET` `/servico`
 
 Essa é a rota que será utilizada para retornar todos os serviços relalizado no Pet Shop que ficaram alocados  no sistema.
