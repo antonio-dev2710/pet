@@ -226,12 +226,12 @@ Rota utilizada para deletar um cliente no sistema.
 {
    7
 }
-Retorna o id do clinete que deletado do Sistema
+- Retorna o id do clinete que foi deletado do sistema
 ```
-### **Pesquisar todas as ordens de serviço relaziada pelo cliente**
+### **Pesquisar todas as ordens de serviço relaziada pelos clientes**
 #### `GET` `/servico`
 
-Essa é a rota que será utilizada para retornar todos os serviços relalizado no Pet Shop que ficaram alocados  no sistema.
+Essa é a rota que será utilizada para retornar todos os serviços relalizados no Pet Shop.
 
 -   **Requisição**  
     Sem parâmetros de query.  
