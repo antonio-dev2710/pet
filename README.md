@@ -1,6 +1,6 @@
 # API - Pet Shop
 
-Esta é uma REST API que permite o cadastro de novos clientes e de animais, incluindo dados pessoais, dados para contato, nome do animal, peso, idade e controle de serviço adiquiro pelos clientes.
+Aplicação REST API que permite o cadastro de novos clientes e de animais, incluindo dados pessoais, dados para contato, nome do animal, peso, idade e controle de serviço adiquiro pelos clientes.
 
 
 
@@ -27,7 +27,7 @@ Essa é a rota que será utilizada para cadastrar um novo cliente no sistema.
     "telefone": "(11)3576-1485"
 }
 ```
-```
+
 #### `POST` `/animal`
 
 Essa é a rota que permite cadastrar o animal do cliente no sistema.
@@ -38,8 +38,8 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
     -   idade
     -   peso
     -   idcliente
-   
-```
+ 
+ 
 #### **Exemplo de requisição**
 
 ```
@@ -55,13 +55,13 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
 }
 ```
 
-## **ATENÇÃO**: A baixo segue um exemplo de resposta do cliente sem o animal cadastrado e  outro exemplo  do animal cadastrado no id sistema.
+## **ATENÇÃO**: A baixo segue um exemplo de resposta do cliente sem o animal cadastrado e  outro exemplo  do animal cadastrado com o id do cliente.
 
 #### **Exemplos de resposta**
 
 ```
 // HTTP Status 200
-#### **Exemplos de resposta de registro do cadrastro do cliente**
+#### **Exemplo de resposta de registro do cadrastro do cliente**
    {
     "idcliente": 12,
     "nome": "Daniel Dias Fernandes",
@@ -72,7 +72,7 @@ Essa é a rota que permite cadastrar o animal do cliente no sistema.
 ```
 ```
 // HTTP Status 200
-#### **Exemplos de resposta do registro do animal*
+#### **Exemplo de resposta do registro do animal*
    {
     "idanimal": 8,
     "nome": "Argo",
