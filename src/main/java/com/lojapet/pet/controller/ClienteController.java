@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lojapet.pet.model.Cliente;
@@ -31,6 +32,15 @@ public class ClienteController {
 
 		return service.buscartodos();
 	}
+	@GetMapping("/cliente/busca")
+	public ArrayList<Cliente> recuperarPorPalavra(@RequestParam(name="nome") String palavra) {
+	
+		
+		
+		return service.buscarPeloNome(palavra);
+		//http://localhost:8080/cliente/busca?palavra=Antonio passar a "palavra como parametro"
+	}
+
 
     @PostMapping("/cliente") // necessário essa validação para @email e @enpity funcionar
 	public ResponseEntity<Cliente> incluirNovo( @RequestBody Cliente novo) {
@@ -75,6 +85,7 @@ public class ClienteController {
 	public ResponseEntity<Integer> excluirCliente(@PathVariable Integer idcliente) {
 
 		service.excluirCliente(idcliente);
+		
 		return ResponseEntity.ok(idcliente);
 
 	}

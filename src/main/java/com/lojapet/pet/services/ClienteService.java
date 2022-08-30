@@ -34,6 +34,7 @@ public class ClienteService implements ICliente {
     public ArrayList<Cliente> buscartodos() {
         // TODO Auto-generated method stub
         return (ArrayList<Cliente>) repository.findAll();
+       
     }
 
     @Override
@@ -63,6 +64,13 @@ public class ClienteService implements ICliente {
 		}
 		return null;
 
+    }
+
+    @Override
+    public ArrayList<Cliente> buscarPeloNome(String palavra) {
+        // TODO Auto-generated method stub
+        return repository.findByNomeContaining(palavra);
+        
     }
 
 }

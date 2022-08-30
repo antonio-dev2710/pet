@@ -16,8 +16,11 @@ public class OrdemServicoService implements IOrdemServico {
     OrdemServicoRepository repository;
     @Override
     public ArrayList<OrdemServico> buscartodos() {
+
+        return repository.findByOrderByValor();
+        //return (ArrayList<OrdemServico>) repository.findAll();
+       
         
-        return (ArrayList<OrdemServico>) repository.findAll();
     }
 
     @Override

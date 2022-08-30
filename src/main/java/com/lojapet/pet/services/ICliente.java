@@ -12,6 +12,7 @@ public interface ICliente {
     public Cliente criarDados(Cliente dados);
 
     public ArrayList<Cliente> buscartodos();
+    public ArrayList<Cliente> buscarPeloNome(String palavra);
 
     public Cliente buscarPeloId(Integer idcliente);
 
