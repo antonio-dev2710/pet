@@ -14,6 +14,7 @@ public interface OrdemServicoRepository  extends CrudRepository<OrdemServico,Int
    public ArrayList<OrdemServico> findByOrderByValor();
     //pesquisa pelo amior valor
    //public ArrayList<OrdemServico> findByOrderByDescValor();
-   //pela palvara chave
+   //pela palvara chave 
+   
    
 }
